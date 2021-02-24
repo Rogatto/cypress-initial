@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rogatto/cypress-initial/issues"
   },
-  "homepage": "https://github.com/Rogatto/cypress-initial#readme"
+  "homepage": "https://github.com/Rogatto/cypress-initial#readme",
+  "dependencies": {
+    "cypress": "^6.5.0"
+  }
 }

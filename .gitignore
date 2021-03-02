@@ -110,4 +110,4 @@ cypress/videos/
 cypress/screenshots/
 
 # Cypress reports
-cypress/report/
+cypress/report/examples/**

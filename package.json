@@ -4,7 +4,22 @@
   "description": "my cypress test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:run": "node_modules/.bin/cypress run",
+    "cypress:info": "cypress info",
+    "cypress:verify": "cypress verify",
+    "cypress:version": "cypress version",
+    "lint": "eslint examples",
+    "lint:json": "eslint --ext .json examples",
+    "start": "echo Call npm start from each example subfolder!",
+    "stop-only": "stop-only --folder examples --skip node_modules --skip dist --skip .cache --skip build",
+    "test:ci": "node ./test-examples",
+    "test:ci:brave": "node ./test-examples --brave",
+    "test:ci:chrome": "node ./test-examples --chrome",
+    "test:ci:chrome:headless": "node ./test-examples --chrome --headless",
+    "test:ci:firefox": "node ./test-examples --firefox",
+    "test:ci:windows": "node ./test-examples --windows",
+    "test:ci:windows:record": "node ./test-examples --windows --record",
+    "warn-only": "stop-only --warn --folder examples --skip node_modules"
   },
   "repository": {
     "type": "git",
@@ -18,5 +33,11 @@
   "homepage": "https://github.com/Rogatto/cypress-initial#readme",
   "dependencies": {
     "cypress": "^6.5.0"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.2",
+    "mocha": "^8.3.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0"
   }
 }

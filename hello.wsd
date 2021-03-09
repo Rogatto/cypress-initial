@@ -1,0 +1,6 @@
+@startuml Hello Word
+skinparam style strictuml
+skinparam SequenceMessageAlignment center
+Client -> API : Create a new user
+Client <- API : Return ID to login
+@enduml

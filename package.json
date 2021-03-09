@@ -4,6 +4,7 @@
   "description": "my cypress test",
   "main": "index.js",
   "scripts": {
+    "test": "npx cypress run",
     "cypress:run": "node_modules/.bin/cypress run",
     "cypress:info": "cypress info",
     "cypress:verify": "cypress verify",
@@ -31,13 +32,15 @@
     "url": "https://github.com/Rogatto/cypress-initial/issues"
   },
   "homepage": "https://github.com/Rogatto/cypress-initial#readme",
-  "dependencies": {
-    "cypress": "^6.5.0"
-  },
   "devDependencies": {
+    "@percy/cypress": "^2.3.4",
+    "cypress": "^6.6.0",
     "cypress-file-upload": "^5.0.2",
     "mocha": "^8.3.0",
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0"
+  },
+  "dependencies": {
+    "cypress-plugin-snapshots": "^1.4.4"
   }
 }

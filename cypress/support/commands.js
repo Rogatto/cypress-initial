@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('createOng', (nameOng, email, phone, city, uf) => {
+
+    cy.request({
+        method: 'POST',
+        url: Cypress.env('hostApi') + Cypress.env('ong_url'),
+        body: {
+            name: nameOng,
+            email: email,
+            whatsapp: phone,
+            city: city,
+            uf: uf,
+        }
+    }).then(response => {
+        expect(response.body.id).is.not.null;
+        cy.log(response.body.id)
+        Cypress.env('createOngIdEnv', response.body.id)
+        return response.body.id
+    })
+})
